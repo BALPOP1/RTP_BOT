@@ -647,7 +647,6 @@ async def send_prediction(channel_id: str, provider_filter: str = "ALL", channel
 
     # Create keyboard (same for all messages)
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🎰 JOGUE AGORA 🔥", url=PLAY_URL)],
         [InlineKeyboardButton("🎁 BOT BÔNUS", url=LINK_URL)]
     ])
 
