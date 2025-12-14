@@ -1,0 +1,7 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "python kiki2test.py"
+restartPolicyType = "always"
+

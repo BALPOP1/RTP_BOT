@@ -28,9 +28,13 @@ from telegram import Bot, InlineKeyboardMarkup, InlineKeyboardButton
 # =============================================================================
 # BOT CONFIGURATION
 # =============================================================================
+# For Railway: Set these as environment variables in your Railway dashboard
+# Or they will use the default values below for local development
+# =============================================================================
 
-BOT_TOKEN = "8581548235:AAFAOEMOmfsDGdogbN6aHTcqdsQtgaZSDm8"
-LINK_URL = "https://t.me/POPREDE_bonus_Bot"
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8581548235:AAFAOEMOmfsDGdogbN6aHTcqdsQtgaZSDm8")
+LINK_URL = os.getenv("LINK_URL", "https://t.me/POPREDE_bonus_Bot")
+PLAY_URL = os.getenv("PLAY_URL", "https://popduqo.com/?ch=23890")
 
 # Image paths - automatically uses the 'images' folder relative to this script
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -643,7 +647,7 @@ async def send_prediction(channel_id: str, provider_filter: str = "ALL", channel
 
     # Create keyboard (same for all messages)
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🎰 JOGUE AGORA 🔥", url="https://popduqo.com/?ch=23890")],
+        [InlineKeyboardButton("🎰 JOGUE AGORA 🔥", url=PLAY_URL)],
         [InlineKeyboardButton("🎁 BOT BÔNUS", url=LINK_URL)]
     ])
 
