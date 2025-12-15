@@ -32,7 +32,7 @@ from telegram import Bot, InlineKeyboardMarkup, InlineKeyboardButton
 # Or they will use the default values below for local development
 # =============================================================================
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "7735558077:AAErlE2HtjPR81N-PCmJrvp6CYMCV33n_No")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8581548235:AAFAOEMOmfsDGdogbN6aHTcqdsQtgaZSDm8")
 LINK_URL = os.getenv("LINK_URL", "https://t.me/POPREDE_bonus_Bot")
 PLAY_URL = os.getenv("PLAY_URL", "https://popduqo.com/?ch=23890")
 
@@ -272,12 +272,12 @@ ALL_GAMES = PG_SOFT_GAMES + PRAGMATIC_GAMES
 
 CHANNEL_CONFIG = [
     {
-        "channel_id": "@PGSinaisPop",      # Replace with your PG SOFT channel
+        "channel_id": "@asdassadher314",      # Replace with your PG SOFT channel
         "provider": "PG SOFT",                  # Only PG SOFT games (Fortune series)
         "name": "PG SOFT Channel"
     },
     {
-        "channel_id": "@PPSinaisPOP",    # Replace with your Pragmatic Play channel
+        "channel_id": "@qwrcxvasdad",    # Replace with your Pragmatic Play channel
         "provider": "PRAGMATIC PLAY",           # Only Pragmatic Play games (Popular series)
         "name": "Pragmatic Play Channel"
     },
@@ -727,21 +727,21 @@ async def send_prediction(channel_id: str, provider_filter: str = "ALL", channel
         # Get image path for this specific game
         image_path = get_game_image_path(game)
 
-    try:
-        with open(image_path, "rb") as photo:
-            await bot.send_photo(
-                chat_id=channel_id,
-                photo=photo,
-                caption=caption,
-                parse_mode="HTML",
-                reply_markup=keyboard
-            )
+        try:
+            with open(image_path, "rb") as photo:
+                await bot.send_photo(
+                    chat_id=channel_id,
+                    photo=photo,
+                    caption=caption,
+                    parse_mode="HTML",
+                    reply_markup=keyboard
+                )
                 
-                print(f"✅ Enviado: {game['display_name']} (RTP: {game['rtp']}%)")
-                sent_count += 1
-                
-                # Small delay between messages to avoid rate limiting
-                await asyncio.sleep(1)
+            print(f"✅ Enviado: {game['display_name']} (RTP: {game['rtp']}%)")
+            sent_count += 1
+            
+            # Small delay between messages to avoid rate limiting
+            await asyncio.sleep(1)
                 
         except FileNotFoundError:
             print(f"❌ Imagem não encontrada: {image_path}")
@@ -758,7 +758,7 @@ async def send_prediction(channel_id: str, provider_filter: str = "ALL", channel
             except Exception as e:
                 print(f"❌ Erro ao enviar mensagem: {e}")
             
-    except Exception as e:
+        except Exception as e:
             print(f"❌ Erro ao enviar {game['display_name']}: {e}")
     
     display_name = channel_name if channel_name else channel_id
@@ -899,7 +899,7 @@ if __name__ == "__main__":
     asyncio.set_event_loop(loop)
     
     try:
-    loop.run_until_complete(main())
+        loop.run_until_complete(main())
     except KeyboardInterrupt:
         print("\n🛑 Bot encerrado pelo usuário")
     except Exception as e:
