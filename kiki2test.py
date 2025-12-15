@@ -32,7 +32,7 @@ from telegram import Bot, InlineKeyboardMarkup, InlineKeyboardButton
 # Or they will use the default values below for local development
 # =============================================================================
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8581548235:AAFAOEMOmfsDGdogbN6aHTcqdsQtgaZSDm8")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "7735558077:AAErlE2HtjPR81N-PCmJrvp6CYMCV33n_No")
 LINK_URL = os.getenv("LINK_URL", "https://t.me/POPREDE_bonus_Bot")
 PLAY_URL = os.getenv("PLAY_URL", "https://popduqo.com/?ch=23890")
 
@@ -272,12 +272,12 @@ ALL_GAMES = PG_SOFT_GAMES + PRAGMATIC_GAMES
 
 CHANNEL_CONFIG = [
     {
-        "channel_id": "@asdassadher314",      # Replace with your PG SOFT channel
+        "channel_id": "@PGSinaisPop",      # Replace with your PG SOFT channel
         "provider": "PG SOFT",                  # Only PG SOFT games (Fortune series)
         "name": "PG SOFT Channel"
     },
     {
-        "channel_id": "@qwrcxvasdad",    # Replace with your Pragmatic Play channel
+        "channel_id": "@PPSinaisPOP",    # Replace with your Pragmatic Play channel
         "provider": "PRAGMATIC PLAY",           # Only Pragmatic Play games (Popular series)
         "name": "Pragmatic Play Channel"
     },
